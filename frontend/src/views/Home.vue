@@ -7,7 +7,11 @@
         header="¡Haz tus compras sin salir de casa!"
         lead="Pide todo lo que necesites con nuestro nuevo servicio de delivery, rápido, fácil y sin salir de casa."
       >
-        <default-button class="mt-5" icon-name="cart4" :onClick="goToShop">
+        <default-button
+          class="mt-3 mt-sm-4 mt-lg-5"
+          icon-name="cart4"
+          :onClick="goToShop"
+        >
           Pide a domicilio
         </default-button>
       </b-jumbotron>
@@ -18,7 +22,7 @@
         <h1 class="text-primary font-weight-bold">Nuestros Productos</h1>
         <hr class="section-hr" />
         <vue-horizontal-list
-          :items="brands"
+          :items="picsCategories"
           :options="{
             autoplay: { play: true, repeat: true, speed: 5000 }
           }"
@@ -26,9 +30,8 @@
           <template v-slot:default="{ item }">
             <div class="item">
               <b-card
-                img-src="../assets/categories/category1.jpeg"
-                img-alt="category1"
-                :data-label="item.id"
+                :img-src="item.img"
+                :img-alt="'category' + item.id"
                 img-top
                 align="center"
                 class="shadow rounded"
@@ -37,7 +40,23 @@
                   class="small"
                   icon-name="cart4"
                   :onClick="goToShop"
-                />
+                >
+                  Explorar!
+                </default-button>
+              </b-card>
+            </div>
+          </template>
+          <template v-slot:end>
+            <div class="item item-start-end">
+              <b-card align="center" class="h-100 shadow rounded">
+                <b-card-title>Y muchisimos más productos</b-card-title>
+                <default-button
+                  class="small"
+                  icon-name="cart4"
+                  :onClick="goToShop"
+                >
+                  Comprar ya!
+                </default-button>
               </b-card>
             </div>
           </template>
@@ -248,6 +267,20 @@ export default {
         { id: 6, img: require("../assets/brands/bavaria.png") },
         { id: 7, img: require("../assets/brands/bavaria.png") },
         { id: 8, img: require("../assets/brands/bavaria.png") }
+      ],
+      picsCategories: [
+        { id: 1, img: require("../assets/categories/mask-group1.png") },
+        { id: 2, img: require("../assets/categories/mask-group2.png") },
+        { id: 3, img: require("../assets/categories/mask-group3.png") },
+        { id: 4, img: require("../assets/categories/mask-group4.png") },
+        { id: 5, img: require("../assets/categories/mask-group5.png") },
+        { id: 6, img: require("../assets/categories/mask-group6.png") },
+        { id: 7, img: require("../assets/categories/mask-group7.png") },
+        { id: 8, img: require("../assets/categories/mask-group8.png") },
+        { id: 9, img: require("../assets/categories/mask-group9.png") },
+        { id: 10, img: require("../assets/categories/mask-group10.png") },
+        { id: 11, img: require("../assets/categories/mask-group11.png") },
+        { id: 12, img: require("../assets/categories/mask-group12.png") }
       ]
     };
   }
@@ -282,20 +315,21 @@ hr.section-hr {
   & > .container > p {
     max-width: 60%;
   }
-}
-
-@media screen and (max-width: 425px) {
-  .jumbotron {
+  @media screen and (max-width: 425px) {
     & > .container > h1,
     & > .container > p {
       max-width: 100%;
     }
   }
-}
-
-@media screen and (max-width: 768px) {
-  .jumbotron h1 {
-    font-size: 2.5rem;
+  @media screen and (max-width: 768px) {
+    & h1 {
+      font-size: 2.5rem;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    & h1 {
+      font-size: 2.9rem;
+    }
   }
 }
 

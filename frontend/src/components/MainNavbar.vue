@@ -58,9 +58,11 @@
       <b-container>
         <b-navbar-nav class="mx-auto">
           <b-nav-item to="/">Inicio</b-nav-item>
-          <b-nav-item to="/shop">Tienda</b-nav-item>
-          <!--<b-nav-item to="/categories">Productos</b-nav-item>-->
           <b-nav-item to="/#map-contact">Contáctenos</b-nav-item>
+          <b-nav-item to="/shop">Tienda</b-nav-item>
+          <b-nav-item to="/login">Iniciar Sesión</b-nav-item>
+          <b-nav-item to="/login">Registrarse</b-nav-item>
+          <!--<b-nav-item to="/categories">Productos</b-nav-item>-->
         </b-navbar-nav>
       </b-container>
     </b-navbar>
