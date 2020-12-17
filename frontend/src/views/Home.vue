@@ -33,7 +33,11 @@
                 align="center"
                 class="shadow rounded"
               >
-                <default-button icon-name="cart4" :onClick="goToShop" />
+                <default-button
+                  class="small"
+                  icon-name="cart4"
+                  :onClick="goToShop"
+                />
               </b-card>
             </div>
           </template>
@@ -43,15 +47,41 @@
     <!--AD ABOUT DELIVERIES-->
     <section class="delivery-banner">
       <b-container>
-        <div class="ad-container shadow rounded">
-          <b-img
-            :src="require('../assets/delivery-banner.png')"
-            center
-            fluid
-            @click="goToShop()"
-            alt="delivery-banner-img"
-          ></b-img>
-        </div>
+        <b-row>
+          <b-col cols="12" md="4">
+            <div class="ad-img-cont shadow rounded">
+              <b-img
+                :src="require('../assets/delivery-banner2.png')"
+                center
+                fluid
+                @click="goToShop()"
+                alt="delivery-banner-img2"
+              ></b-img>
+            </div>
+          </b-col>
+          <b-col cols="6" md="4">
+            <div class="ad-img-cont shadow rounded">
+              <b-img
+                :src="require('../assets/delivery-banner3.png')"
+                center
+                fluid
+                @click="goToShop()"
+                alt="delivery-banner-img1"
+              ></b-img>
+            </div>
+          </b-col>
+          <b-col cols="6" md="4">
+            <div class="ad-img-cont shadow rounded">
+              <b-img
+                :src="require('../assets/delivery-banner1.png')"
+                center
+                fluid
+                @click="goToShop()"
+                alt="delivery-banner-img3"
+              ></b-img>
+            </div>
+          </b-col>
+        </b-row>
       </b-container>
     </section>
     <!--ABOUT US-->
@@ -112,7 +142,7 @@
               </p>
             </b-col>
           </b-row>
-          <b-row align-h="center mt-3">
+          <b-row align-h="center" class="mt-3">
             <b-col
               cols="4"
               sm="3"
@@ -139,7 +169,7 @@
         <hr class="section-hr" />
         <div class="shadow rounded">
           <div class="row">
-            <b-col cols="12" sm="5">
+            <b-col cols="12" md="5">
               <b-container class="mt-3">
                 <h5 class="font-weight-bold">Nuestras sedes</h5>
                 <ul class="list-unstyled">
@@ -175,11 +205,11 @@
                 <h5 class="font-weight-bold">Redes sociales</h5>
                 <ul class="list-inline">
                   <li class="list-inline-item">Facebook</li>
-                  <li class="list-inline-item">Twitter</li>
+                  <li class="list-inline-item">Instagram</li>
                 </ul>
               </b-container>
             </b-col>
-            <b-col cols="12" sm="7">
+            <b-col cols="12" md="7">
               <div>
                 <b-embed
                   type="iframe"
@@ -285,7 +315,7 @@ section.delivery-banner {
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
-  .ad-container {
+  .ad-img-cont {
     margin: 0;
     padding: 0;
     background: #fff;

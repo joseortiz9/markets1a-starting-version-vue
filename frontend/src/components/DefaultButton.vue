@@ -35,6 +35,10 @@ export default {
   border: 0;
   position: relative;
   width: auto;
+  &.small {
+    font-size: 15px;
+    padding: 8px 30px;
+  }
   &:focus {
     outline: 0;
   }

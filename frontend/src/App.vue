@@ -17,5 +17,10 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 #app {
   font-family: "Open Sans", sans-serif;
+  @media screen and (max-width: 768px) {
+    & {
+      margin-top: 55px;
+    }
+  }
 }
 </style>
