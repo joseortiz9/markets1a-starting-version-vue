@@ -26,15 +26,15 @@
         <!-- center aligned search form -->
         <b-navbar-nav class="d-none d-md-flex mx-auto search-nav">
           <b-nav-form>
-            <b-input-group size="md">
-              <b-input-group-prepend is-text>
+            <b-form-group size="md">
+              <span class="form-control-feedback">
                 <b-icon icon="search"></b-icon>
-              </b-input-group-prepend>
+              </span>
               <b-form-input
                 type="search"
                 placeholder="Que buscas?"
               ></b-form-input>
-            </b-input-group>
+            </b-form-group>
           </b-nav-form>
         </b-navbar-nav>
         <!-- Right aligned nav items -->
@@ -60,8 +60,7 @@
           <b-nav-item to="/">Inicio</b-nav-item>
           <b-nav-item to="/#map-contact">Contáctenos</b-nav-item>
           <b-nav-item to="/shop">Tienda</b-nav-item>
-          <b-nav-item to="/login">Iniciar Sesión</b-nav-item>
-          <b-nav-item to="/login">Registrarse</b-nav-item>
+          <b-nav-item to="/login">Ingresar</b-nav-item>
           <!--<b-nav-item to="/categories">Productos</b-nav-item>-->
         </b-navbar-nav>
       </b-container>
@@ -92,6 +91,22 @@ nav#global-navbar {
   }
   a.nav-link {
     font-size: 1.4rem;
+  }
+  .search-nav .form-control {
+    padding-left: 2.375rem;
+    border-radius: 25px;
+  }
+
+  .search-nav .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: $secondary;
   }
 }
 

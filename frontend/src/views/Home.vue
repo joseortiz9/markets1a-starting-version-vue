@@ -111,14 +111,12 @@
             <h1 class="text-primary font-weight-bold">Sobre nosotros</h1>
             <hr class="section-hr" />
             <p class="lead text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et
-              commodo semper habitant vestibulum imperdiet donec. Laoreet fames
-              in semper habitant. Ut pellentesque quam imperdiet tempus aliquet.
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et
-              commodo semper habitant vestibulum imperdiet donec. Laoreet fames
-              morbi tellus in semper habitant. Ut pellentesque quam imperdiet
-              tempus aliquet
+              Supermarket 1a, somos la solución a sus problemas de
+              abastecimiento, nuestro formato Market nos permite brindarle un
+              servicio diferencial, ágil y personalizado, con mayor cercanía a
+              su hogar, colocando a su alcance gran variedad de productos de la
+              más alta calidad y lo mejor con "precios justos" <br> Servicio a
+              Domicilios Totalmente Gratis
             </p>
             <div class="mx-auto mt-5 text-center">
               <span class="lead font-weight-bold">
@@ -223,8 +221,13 @@
                 </ul>
                 <h5 class="font-weight-bold">Redes sociales</h5>
                 <ul class="list-inline">
-                  <li class="list-inline-item">Facebook</li>
-                  <li class="list-inline-item">Instagram</li>
+                  <li class="list-inline-item">
+                    <a
+                      href="https://www.facebook.com/Supermarkets-1A-119449439962921"
+                      target="_blank"
+                      >Facebook
+                    </a>
+                  </li>
                 </ul>
               </b-container>
             </b-col>
