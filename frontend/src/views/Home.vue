@@ -290,12 +290,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.text-primary {
-  color: $primary !important;
-}
-.text-secondary {
-  color: $secondary !important;
-}
 hr.section-hr {
   background: $secondary;
   height: 5px;

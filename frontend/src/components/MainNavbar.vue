@@ -32,7 +32,7 @@
               </span>
               <b-form-input
                 type="search"
-                placeholder="Que buscas?"
+                placeholder="¿Qué estás buscando?"
               ></b-form-input>
             </b-form-group>
           </b-nav-form>

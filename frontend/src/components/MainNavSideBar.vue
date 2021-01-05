@@ -1,5 +1,5 @@
 <template>
-  <b-sidebar id="nav-sidebar" no-header backdrop-variant="dark" backdrop>
+  <b-sidebar id="nav-sidebar" width="270px" no-header backdrop-variant="dark" backdrop>
     <header
       class="d-flex justify-content-between align-items-baseline px-4 py-3"
     >

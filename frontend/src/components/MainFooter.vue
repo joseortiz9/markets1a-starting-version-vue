@@ -1,87 +1,143 @@
 <template>
   <footer>
-    <b-container>
-      <b-row>
-        <b-col>
-          <h5 class="font-weight-bold">Nosotros</h5>
-          <ul class="list-unstyled">
-            <li>Todo sobre 1A</li>
-            <li>Nuestros asociados</li>
-            <li>Pruductos</li>
-            <li>Mas información</li>
-          </ul>
-        </b-col>
-        <b-col>
-          <h5 class="font-weight-bold">Información</h5>
-          <ul class="list-unstyled">
-            <li>Politicas de envío y devolución</li>
-            <li>Política de privacidad</li>
-            <li>Términos y condiciones</li>
-          </ul>
-        </b-col>
-        <b-col>
-          <h5 class="font-weight-bold">Contactos</h5>
-          <ul class="list-unstyled">
-            <li>
-              <b-icon icon="chat-dots" />
-              <a href="tel:+573233442359">
-                323 344-2359
-              </a>
-            </li>
-            <li>
-              <b-icon icon="chat-dots" />
-              <a href="tel:+573152611795">
-                315 261-1795
-              </a>
-            </li>
-          </ul>
-        </b-col>
-        <b-col>
-          <h5 class="font-weight-bold">Nuestras sedes</h5>
-          <ul class="list-unstyled">
-            <li>
-              <b-icon icon="geo-alt-fill"></b-icon>
-              Calle 48 Bis #92-21
-            </li>
-          </ul>
-        </b-col>
-        <b-col class="d-flex align-items-center justify-content-center">
-          <b-img
-            src="../assets/logo-footer.png"
-            center
-            fluid
-            alt="about-us-img"
-          ></b-img>
-        </b-col>
-      </b-row>
-    </b-container>
+    <div class="newsletter-section">
+      <b-container
+        class="d-flex flex-column flex-md-row align-items-center py-4"
+      >
+        <span class="lead font-weight-bold text-center mr-3">
+          <b-icon icon="envelope" class="text-primary" />
+          ¡Unete a la familia
+          <span class="text-primary"> 1A </span>
+          y <br />
+          recibe todas nuestras <span class="text-secondary"> novedades</span>!
+        </span>
+        <newsletter-form class="mt-2 mt-md-0" />
+        <default-button
+          class="small ml-md-auto mt-4 mt-md-0"
+          icon-name="shop"
+          :onClick="goToContactUs"
+        >
+          Nuestras sucursales
+        </default-button>
+      </b-container>
+    </div>
+    <div class="footer-grid">
+      <b-container>
+        <b-row>
+          <b-col>
+            <h5 class="font-weight-bold">Nosotros</h5>
+            <ul class="list-unstyled">
+              <li>Todo sobre 1A</li>
+              <li>Nuestros asociados</li>
+              <li>Pruductos</li>
+              <li>Mas información</li>
+            </ul>
+          </b-col>
+          <b-col>
+            <h5 class="font-weight-bold">Información</h5>
+            <ul class="list-unstyled">
+              <li>Politicas de envío y devolución</li>
+              <li>Política de privacidad</li>
+              <li>Términos y condiciones</li>
+            </ul>
+          </b-col>
+          <b-col>
+            <h5 class="font-weight-bold">Contactos</h5>
+            <ul class="list-unstyled">
+              <li>
+                <b-icon icon="chat-dots" />
+                <a href="tel:+573233442359">
+                  323 344-2359
+                </a>
+              </li>
+              <li>
+                <b-icon icon="chat-dots" />
+                <a href="tel:+573152611795">
+                  315 261-1795
+                </a>
+              </li>
+            </ul>
+          </b-col>
+          <b-col>
+            <h5 class="font-weight-bold">Nuestras sedes</h5>
+            <ul class="list-unstyled">
+              <li>
+                <b-icon icon="geo-alt-fill"></b-icon>
+                Calle 48 Bis #92-21
+              </li>
+            </ul>
+          </b-col>
+          <b-col class="d-flex align-items-center justify-content-center">
+            <b-img
+              src="../assets/logo-footer.png"
+              center
+              fluid
+              alt="about-us-img"
+            ></b-img>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
+    <div class="copyright-bar">
+      <b-container class="d-flex align-items-center py-3">
+        <div class="mx-auto">
+          <span>
+            &copy; 2021 Supermarket1A | Desarrollado por Jose Ortiz
+          </span>
+        </div>
+        <ScrollTopBtn />
+      </b-container>
+    </div>
   </footer>
 </template>
 
 <script>
+import ScrollTopBtn from "@/components/ScrollTopBtn";
+import NewsletterForm from "@/components/NewsletterForm";
+import DefaultButton from "@/components/DefaultButton";
 export default {
   name: "MainFooter",
-  components: {}
+  components: { NewsletterForm, ScrollTopBtn, DefaultButton },
+  methods: {
+    goToContactUs() {
+      this.$router.push({ name: "Shop" });
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
 footer {
-  color: white;
-  background: $primary;
   margin-top: 120px;
-  padding: 75px 0 85px 0;
-  h5 {
-    margin-bottom: 15px;
+  .newsletter-section {
+    background-color: $secondary-section-bg;
+    span.lead {
+      font-size: 95%;
+    }
   }
-  ul li {
-    margin-bottom: 6px;
-    a {
-      color: white;
-      &:hover {
-        text-decoration: none;
-        color: darken(white, 20);
+  .footer-grid {
+    background-color: $primary;
+    padding: 75px 0 85px 0;
+    color: white;
+    h5 {
+      margin-bottom: 15px;
+    }
+    ul li {
+      margin-bottom: 6px;
+      a {
+        color: white;
+        &:hover {
+          text-decoration: none;
+          color: darken(white, 30);
+        }
       }
     }
+  }
+  .copyright-bar {
+    span {
+      font-size: 90%;
+    }
+    color: darken(white, 20);
+    background-color: darken($primary, 20);
   }
 }
 </style>

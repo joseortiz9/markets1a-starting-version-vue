@@ -19,7 +19,7 @@ export default {
     },
     onClick: {
       type: Function,
-      required: true
+      default: () => {}
     }
   },
   components: {}
