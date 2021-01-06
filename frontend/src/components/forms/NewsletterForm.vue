@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import DefaultButton from "@/components/DefaultButton";
+import DefaultButton from "@/components/buttons/DefaultButton";
 export default {
   name: "NewsletterForm",
   components: { DefaultButton },

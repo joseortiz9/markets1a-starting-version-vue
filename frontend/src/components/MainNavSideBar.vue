@@ -1,5 +1,12 @@
 <template>
-  <b-sidebar id="nav-sidebar" width="270px" no-header backdrop-variant="dark" backdrop>
+  <b-sidebar
+    id="nav-sidebar"
+    width="270px"
+    no-header
+    backdrop-variant="dark"
+    backdrop
+    z-index="1031"
+  >
     <header
       class="d-flex justify-content-between align-items-baseline px-4 py-3"
     >
@@ -38,7 +45,7 @@
   </b-sidebar>
 </template>
 <script>
-import DefaultButton from "@/components/DefaultButton";
+import DefaultButton from "@/components/buttons/DefaultButton";
 export default {
   name: "MainNavSideBar",
   components: { DefaultButton },

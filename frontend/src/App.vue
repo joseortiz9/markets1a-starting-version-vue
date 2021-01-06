@@ -23,9 +23,16 @@ export default {
   .text-secondary {
     color: $secondary !important;
   }
+  hr.section-hr {
+    background: $secondary;
+    height: 5px;
+    width: 105px;
+    margin-right: 100%;
+    margin-bottom: 40px;
+  }
   @media screen and (max-width: 768px) {
     & {
-      margin-top: 55px;
+      margin-top: 105px;
     }
   }
 }

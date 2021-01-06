@@ -27,9 +27,11 @@ a.btn-to-top {
   background-color: $secondary;
   padding: 8px 12px;
   cursor: pointer;
+  transition: all 0.3s;
   &:hover {
     background-color: darken($secondary, 15);
     box-shadow: 6px 6px 10px darken($secondary, 30);
+    transform: translateY(-5px);
   }
 }
 </style>

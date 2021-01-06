@@ -19,48 +19,19 @@
     <!--CATEGORIES CAROUSEL-->
     <section class="categories-carousel">
       <b-container>
-        <h1 class="text-primary font-weight-bold">Nuestros Productos</h1>
-        <hr class="section-hr" />
         <vue-horizontal-list
           :items="picsCategories"
-          :options="{
-            autoplay: { play: true, repeat: true, speed: 5000 }
-          }"
+          :options="carouselCategoriesProps"
         >
           <template v-slot:default="{ item }">
-            <div class="item">
-              <b-card
-                :img-src="item.img"
-                :img-alt="'category' + item.id"
-                img-top
-                align="center"
-                class="shadow rounded"
-              >
-                <default-button
-                  class="small"
-                  icon-name="cart4"
-                  :onClick="goToShop"
-                >
-                  Explorar!
-                </default-button>
-              </b-card>
-            </div>
-          </template>
-          <template v-slot:end>
-            <div class="item item-start-end">
-              <b-card align="center" class="h-100 shadow rounded">
-                <b-card-title>Y muchisimos más productos</b-card-title>
-                <default-button
-                  class="small"
-                  icon-name="cart4"
-                  :onClick="goToShop"
-                >
-                  Comprar ya!
-                </default-button>
-              </b-card>
-            </div>
+            <category-picture-card :item="item" />
           </template>
         </vue-horizontal-list>
+        <div class="d-flex justify-content-end mt-3">
+          <router-link to="/shop" class="text-secondary">
+            Conocer más...
+          </router-link>
+        </div>
       </b-container>
     </section>
     <!--AD ABOUT DELIVERIES-->
@@ -115,8 +86,8 @@
               abastecimiento, nuestro formato Market nos permite brindarle un
               servicio diferencial, ágil y personalizado, con mayor cercanía a
               su hogar, colocando a su alcance gran variedad de productos de la
-              más alta calidad y lo mejor con "precios justos" <br> Servicio a
-              Domicilios Totalmente Gratis
+              más alta calidad y lo mejor con "precios justos" <br />
+              Servicio a Domicilios Totalmente Gratis
             </p>
             <div class="mx-auto mt-5 text-center">
               <span class="lead font-weight-bold">
@@ -179,69 +150,14 @@
         </b-container>
       </div>
     </section>
-    <!--MAP AND CONTACTS-->
-    <section id="map-contact">
+    <section>
       <b-container>
-        <h1 class="text-primary font-weight-bold">Donde encontrarnos</h1>
-        <hr class="section-hr" />
-        <div class="shadow rounded">
-          <div class="row">
-            <b-col cols="12" md="5">
-              <b-container class="mt-3">
-                <h5 class="font-weight-bold">Nuestras sedes</h5>
-                <ul class="list-unstyled">
-                  <li>
-                    <b-icon icon="geo-alt-fill"></b-icon>
-                    Calle 48 Bis #92-21
-                  </li>
-                </ul>
-                <h5 class="font-weight-bold">Horarios de Atención</h5>
-                <ul class="list-unstyled">
-                  <li>
-                    Lunes-viernes: 8am a 6pm
-                  </li>
-                  <li>
-                    fin de semana y festivos: 8am a 4pm
-                  </li>
-                </ul>
-                <h5 class="font-weight-bold">Contactos</h5>
-                <ul class="list-unstyled">
-                  <li>
-                    <b-icon icon="chat-dots" />
-                    <a href="tel:+573233442359">
-                      323 344-2359
-                    </a>
-                  </li>
-                  <li>
-                    <b-icon icon="chat-dots" />
-                    <a href="tel:+573152611795">
-                      315 261-1795
-                    </a>
-                  </li>
-                </ul>
-                <h5 class="font-weight-bold">Redes sociales</h5>
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a
-                      href="https://www.facebook.com/Supermarkets-1A-119449439962921"
-                      target="_blank"
-                      >Facebook
-                    </a>
-                  </li>
-                </ul>
-              </b-container>
-            </b-col>
-            <b-col cols="12" md="7">
-              <div>
-                <b-embed
-                  type="iframe"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7739.010197748498!2d-76.52063609717749!3d3.3769983217596113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a110436afcb7%3A0xd020dc8766488ff5!2sCl%2048%20Bis%20%2392-21%2C%20Cali%2C%20Valle%20del%20Cauca%2C%20Colombia!5e0!3m2!1sen!2sru!4v1604029240259!5m2!1sen!2sru"
-                  allowfullscreen
-                  aria-hidden="false"
-                ></b-embed>
-              </div>
-            </b-col>
-          </div>
+        <div class="mx-auto mt-5 text-center">
+          <span class="lead font-weight-bold" style="opacity: 0.45">
+            1A Supermarkets
+            <span class="text-primary">¡Los Mejores </span>
+            <span class="text-secondary">en Todo!</span>
+          </span>
         </div>
       </b-container>
     </section>
@@ -249,11 +165,16 @@
 </template>
 
 <script>
-import DefaultButton from "@/components/DefaultButton";
+import DefaultButton from "@/components/buttons/DefaultButton";
 import VueHorizontalList from "vue-horizontal-list";
+import CategoryPictureCard from "@/components/cards/CategoryPictureCard";
 export default {
   name: "Home",
-  components: { DefaultButton, VueHorizontalList },
+  components: {
+    CategoryPictureCard,
+    DefaultButton,
+    VueHorizontalList
+  },
   methods: {
     goToShop() {
       this.$router.push({ name: "Shop" });
@@ -261,6 +182,15 @@ export default {
   },
   data() {
     return {
+      carouselCategoriesProps: {
+        autoplay: { play: true, repeat: true, speed: 5000 },
+        responsive: [
+          { end: 375, size: 1 },
+          { start: 375, end: 768, size: 2 },
+          { start: 768, end: 992, size: 3 },
+          { size: 4 }
+        ]
+      },
       brands: [
         { id: 1, img: require("../assets/brands/bavaria.png") },
         { id: 2, img: require("../assets/brands/bavaria.png") },
@@ -290,14 +220,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-hr.section-hr {
-  background: $secondary;
-  height: 5px;
-  width: 105px;
-  margin-right: 100%;
-  margin-bottom: 40px;
-}
-
 .jumbotron {
   color: white;
   background-image: url("../assets/landing-hero-bg.png");
@@ -331,7 +253,12 @@ hr.section-hr {
 }
 
 section:not(:first-child) {
-  margin-top: 130px;
+  margin-top: 110px;
+  @media screen and (max-width: 992px) {
+    & {
+      margin-top: 60px;
+    }
+  }
 }
 
 section.about-us {

@@ -67,13 +67,14 @@
               </li>
             </ul>
           </b-col>
-          <b-col class="d-flex align-items-center justify-content-center">
+          <b-col class="d-flex flex-column align-items-center justify-content-center">
             <b-img
               src="../assets/logo-footer.png"
               center
               fluid
               alt="about-us-img"
             ></b-img>
+            <social-media-btns-row class="w-100" />
           </b-col>
         </b-row>
       </b-container>
@@ -92,12 +93,18 @@
 </template>
 
 <script>
-import ScrollTopBtn from "@/components/ScrollTopBtn";
-import NewsletterForm from "@/components/NewsletterForm";
-import DefaultButton from "@/components/DefaultButton";
+import ScrollTopBtn from "@/components/buttons/ScrollTopBtn";
+import NewsletterForm from "@/components/forms/NewsletterForm";
+import DefaultButton from "@/components/buttons/DefaultButton";
+import SocialMediaBtnsRow from "@/components/buttons/SocialMediaBtnsRow";
 export default {
   name: "MainFooter",
-  components: { NewsletterForm, ScrollTopBtn, DefaultButton },
+  components: {
+    SocialMediaBtnsRow,
+    NewsletterForm,
+    ScrollTopBtn,
+    DefaultButton
+  },
   methods: {
     goToContactUs() {
       this.$router.push({ name: "Shop" });
@@ -107,7 +114,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 footer {
-  margin-top: 120px;
+  margin-top: 60px;
   .newsletter-section {
     background-color: $secondary-section-bg;
     span.lead {

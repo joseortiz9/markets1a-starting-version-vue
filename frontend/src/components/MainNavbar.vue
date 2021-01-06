@@ -2,8 +2,7 @@
   <div>
     <b-navbar
       fixed="top"
-      id="global-navbar"
-      class="m-md-0 p-1"
+      class="global-navbar m-md-0 p-1"
       type="dark"
       variant="dark"
     >
@@ -25,24 +24,14 @@
         </b-navbar-brand>
         <!-- center aligned search form -->
         <b-navbar-nav class="d-none d-md-flex mx-auto search-nav">
-          <b-nav-form>
-            <b-form-group size="md">
-              <span class="form-control-feedback">
-                <b-icon icon="search"></b-icon>
-              </span>
-              <b-form-input
-                type="search"
-                placeholder="¿Qué estás buscando?"
-              ></b-form-input>
-            </b-form-group>
-          </b-nav-form>
+          <nav-search-form />
         </b-navbar-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav>
+          <b-nav-item to="/login">
+            <b-icon icon="person-circle"></b-icon>
+          </b-nav-item>
           <div class="d-none d-md-flex">
-            <b-nav-item to="/login">
-              <b-icon icon="person-circle"></b-icon>
-            </b-nav-item>
             <b-nav-item href="#">
               <b-icon icon="box-seam"></b-icon>
             </b-nav-item>
@@ -53,12 +42,29 @@
         </b-navbar-nav>
       </b-container>
     </b-navbar>
+    <b-navbar
+      fixed="top"
+      id="search-sm-navbar"
+      class="d-md-none px-3 global-navbar"
+      type="dark"
+      variant="dark"
+    >
+      <nav-search-form />
+    </b-navbar>
     <!--NAVEGARTION NAVBAR-->
     <b-navbar id="navigation-navbar" class="d-none d-md-flex">
       <b-container>
-        <b-navbar-nav class="mx-auto">
+        <b-navbar-nav class="w-100 justify-content-between">
+          <b-nav-item to="/categories">
+            <b-icon icon="card-list" />
+            Categorias
+          </b-nav-item>
+          <b-nav-item to="/discounts">
+            <b-icon icon="tags-fill" />
+            Descuentos
+          </b-nav-item>
           <b-nav-item to="/">Inicio</b-nav-item>
-          <b-nav-item to="/#map-contact">Contáctenos</b-nav-item>
+          <b-nav-item to="/contact-us">Contáctenos</b-nav-item>
           <b-nav-item to="/shop">Tienda</b-nav-item>
           <b-nav-item to="/login">Ingresar</b-nav-item>
           <!--<b-nav-item to="/categories">Productos</b-nav-item>-->
@@ -70,10 +76,11 @@
 
 <script>
 import MainNavSideBar from "@/components/MainNavSideBar";
+import NavSearchForm from "@/components/forms/NavSearchForm";
 
 export default {
   name: "MainNavbar",
-  components: { MainNavSideBar },
+  components: { NavSearchForm, MainNavSideBar },
   data() {
     return {};
   },
@@ -81,7 +88,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-nav#global-navbar {
+nav.global-navbar {
   background: $primary !important;
   @media screen and (min-width: 768px) {
     height: 75px;
@@ -92,22 +99,9 @@ nav#global-navbar {
   a.nav-link {
     font-size: 1.4rem;
   }
-  .search-nav .form-control {
-    padding-left: 2.375rem;
-    border-radius: 25px;
-  }
-
-  .search-nav .form-control-feedback {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
-    text-align: center;
-    pointer-events: none;
-    color: $secondary;
-  }
+}
+nav#search-sm-navbar {
+  margin-top: 53px;
 }
 
 nav#navigation-navbar {

@@ -12,16 +12,19 @@ const routes = [
     component: Home
   },
   {
+    path: "/contact-us",
+    name: "ContactUs",
+    component: () => import("../views/ContactUs.vue")
+  },
+  {
     path: "/shop",
     name: "Shop",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Maintenance.vue")
+    component: () => import("../views/Shop.vue")
   },
   {
     path: "/login",
     name: "Login",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Maintenance.vue")
+    component: () => import("../views/auth/Login.vue")
   },
   { path: "/404", component: NotFound },
   { path: "*", redirect: "/404" }
