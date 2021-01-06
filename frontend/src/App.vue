@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <main-navbar />
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
     <main-footer />
   </div>
 </template>
@@ -28,7 +30,7 @@ export default {
     height: 5px;
     width: 105px;
     margin-right: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   @media screen and (max-width: 768px) {
     & {

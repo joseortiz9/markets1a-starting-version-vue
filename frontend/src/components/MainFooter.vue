@@ -107,7 +107,7 @@ export default {
   },
   methods: {
     goToContactUs() {
-      this.$router.push({ name: "Shop" });
+      this.$router.push({ name: "ContactUs" });
     }
   }
 };

@@ -2,12 +2,24 @@
   <!--MAP AND CONTACTS-->
   <section>
     <b-container>
+      <h2 class="text-primary font-weight-bold mt-5">Nuestras tiendas</h2>
+      <hr class="section-hr" />
       <b-row>
-        <b-col sm="7">
-          feaf
+        <b-col
+          cols="12"
+          md="7"
+          class="order-md-1 order-2 d-flex flex-column justify-content-center"
+        >
+          <schedules-card />
+          <div
+            class="d-inline-flex align-items-baseline justify-content-center"
+          >
+            <span class="lead font-weight-bold">¡Siguenos! </span>
+            <social-media-btns-row class="mt-4 w-25" />
+          </div>
         </b-col>
-        <b-col sm="5">
-          <div class="us-dropped-container mr-5">
+        <b-col cols="12" md="5" class="order-md-2 order-1">
+          <div class="us-dropped-container mr-4">
             <b-img
               :src="require('../assets/about-us-img.jpeg')"
               center
@@ -36,72 +48,28 @@
           </div>
         </b-col>
       </b-row>
-
-      <div class="shadow rounded">
-        <div class="row">
-          <b-col cols="12" md="5">
-            <b-container class="mt-3">
-              <h5 class="font-weight-bold">Nuestras sedes</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <b-icon icon="geo-alt-fill"></b-icon>
-                  Calle 48 Bis #92-21
-                </li>
-              </ul>
-              <h5 class="font-weight-bold">Horarios de Atención</h5>
-              <ul class="list-unstyled">
-                <li>
-                  Lunes-viernes: 8am a 6pm
-                </li>
-                <li>
-                  fin de semana y festivos: 8am a 4pm
-                </li>
-              </ul>
-              <h5 class="font-weight-bold">Contactos</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <b-icon icon="chat-dots" />
-                  <a href="tel:+573233442359">
-                    323 344-2359
-                  </a>
-                </li>
-                <li>
-                  <b-icon icon="chat-dots" />
-                  <a href="tel:+573152611795">
-                    315 261-1795
-                  </a>
-                </li>
-              </ul>
-              <h5 class="font-weight-bold">Redes sociales</h5>
-              <social-media-btns-row class="w-50 my-3" />
-            </b-container>
-          </b-col>
-          <b-col cols="12" md="7">
-
-          </b-col>
-        </div>
-      </div>
     </b-container>
   </section>
 </template>
 <script>
 import SocialMediaBtnsRow from "@/components/buttons/SocialMediaBtnsRow";
 import LocationCard from "@/components/cards/LocationCard";
+import SchedulesCard from "@/components/cards/SchedulesCard";
 export default {
   name: "ContactUs",
-  components: {LocationCard, SocialMediaBtnsRow }
+  components: { SchedulesCard, LocationCard, SocialMediaBtnsRow }
 };
 </script>
 <style lang="scss" scoped>
-.row {
-  margin: 70px 0 100px 0;
-}
-.us-dropped-container {
-  border: 5px solid $secondary;
-  border-radius: 10px;
-  img {
-    transform: translate(30px, 30px);
+.container > .row {
+  margin: 40px 0 100px 0;
+  .us-dropped-container {
+    border: 5px solid $secondary;
     border-radius: 10px;
+    img {
+      transform: translate(30px, 30px);
+      border-radius: 10px;
+    }
   }
 }
 </style>

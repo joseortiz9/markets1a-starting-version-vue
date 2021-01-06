@@ -1,5 +1,5 @@
 <template>
-  <b-card class="rounded">
+  <b-card @click="onClick" class="rounded">
     <b-icon icon="shop" class="location-store-icon" />
     <h4 class="card-title mt-1 font-weight-bold">
       <span>{{ neighborhood }}</span>
@@ -17,9 +17,10 @@
 export default {
   name: "LocationCard",
   props: {
-    phones: { type: [], required: true },
+    phones: { type: Array, required: true },
     neighborhood: { type: String, required: true },
-    address: { type: String, required: true }
+    address: { type: String, required: true },
+    onClick: { type: Function, default: () => {} }
   }
 };
 </script>
@@ -29,6 +30,7 @@ export default {
   padding: 30px;
   transition: 0.4s;
   &:hover {
+    cursor: pointer;
     color: white;
     background-color: $secondary;
     a,

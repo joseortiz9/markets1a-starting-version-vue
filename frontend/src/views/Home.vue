@@ -34,42 +34,30 @@
         </div>
       </b-container>
     </section>
-    <!--AD ABOUT DELIVERIES-->
-    <section class="delivery-banner">
+    <!--PRODUCTS ON DISCOUNT-->
+    <section id="discounts">
       <b-container>
+        <h1 class="text-primary font-weight-bold">Descuentos del mes</h1>
+        <hr class="section-hr" />
+        seccions de productos
+      </b-container>
+    </section>
+    <!--OUR PLACES-->
+    <section id="places-schedule">
+      <b-container>
+        <h1 class="text-primary font-weight-bold">Nuestras Sucursales</h1>
+        <hr class="section-hr" />
         <b-row>
-          <b-col cols="12" md="4">
-            <div class="ad-img-cont shadow rounded">
-              <b-img
-                :src="require('../assets/delivery-banner2.png')"
-                center
-                fluid
-                @click="goToShop()"
-                alt="delivery-banner-img2"
-              ></b-img>
-            </div>
+          <b-col cols="12" md="5">
+            <location-card
+              :onClick="goToContactUs"
+              neighborhood="Valle del Lili"
+              :phones="['323 344-2359', '315 261-1795']"
+              address="Calle 48 Bis #92-21"
+            />
           </b-col>
-          <b-col cols="6" md="4">
-            <div class="ad-img-cont shadow rounded">
-              <b-img
-                :src="require('../assets/delivery-banner3.png')"
-                center
-                fluid
-                @click="goToShop()"
-                alt="delivery-banner-img1"
-              ></b-img>
-            </div>
-          </b-col>
-          <b-col cols="6" md="4">
-            <div class="ad-img-cont shadow rounded">
-              <b-img
-                :src="require('../assets/delivery-banner1.png')"
-                center
-                fluid
-                @click="goToShop()"
-                alt="delivery-banner-img3"
-              ></b-img>
-            </div>
+          <b-col cols="12" md="7">
+            <schedules-card />
           </b-col>
         </b-row>
       </b-container>
@@ -150,6 +138,47 @@
         </b-container>
       </div>
     </section>
+    <!--AD ABOUT DELIVERIES-->
+    <section class="delivery-banner">
+      <b-container>
+        <b-row>
+          <b-col cols="12" md="4">
+            <div class="ad-img-cont shadow rounded">
+              <b-img
+                :src="require('../assets/delivery-banner2.png')"
+                center
+                fluid
+                @click="goToShop()"
+                alt="delivery-banner-img2"
+              ></b-img>
+            </div>
+          </b-col>
+          <b-col cols="6" md="4">
+            <div class="ad-img-cont shadow rounded">
+              <b-img
+                :src="require('../assets/delivery-banner3.png')"
+                center
+                fluid
+                @click="goToShop()"
+                alt="delivery-banner-img1"
+              ></b-img>
+            </div>
+          </b-col>
+          <b-col cols="6" md="4">
+            <div class="ad-img-cont shadow rounded">
+              <b-img
+                :src="require('../assets/delivery-banner1.png')"
+                center
+                fluid
+                @click="goToShop()"
+                alt="delivery-banner-img3"
+              ></b-img>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
+    <!--LEAD END TEXT-->
     <section>
       <b-container>
         <div class="mx-auto mt-5 text-center">
@@ -168,9 +197,13 @@
 import DefaultButton from "@/components/buttons/DefaultButton";
 import VueHorizontalList from "vue-horizontal-list";
 import CategoryPictureCard from "@/components/cards/CategoryPictureCard";
+import LocationCard from "@/components/cards/LocationCard";
+import SchedulesCard from "@/components/cards/SchedulesCard";
 export default {
   name: "Home",
   components: {
+    SchedulesCard,
+    LocationCard,
     CategoryPictureCard,
     DefaultButton,
     VueHorizontalList
@@ -178,6 +211,9 @@ export default {
   methods: {
     goToShop() {
       this.$router.push({ name: "Shop" });
+    },
+    goToContactUs() {
+      this.$router.push({ name: "ContactUs" });
     }
   },
   data() {
