@@ -67,11 +67,14 @@
               </li>
             </ul>
           </b-col>
-          <b-col class="d-flex flex-column align-items-center justify-content-center">
+          <b-col
+            class="d-flex flex-column align-items-center justify-content-center"
+          >
             <b-img
-              src="../assets/logo-footer.png"
+              :src="require('@/assets/landing/logo-footer.png')"
               center
               fluid
+              class="logo"
               alt="about-us-img"
             ></b-img>
             <social-media-btns-row class="w-100" />

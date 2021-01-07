@@ -1,7 +1,7 @@
 <template>
   <b-card
     overlay
-    :img-src="require('../../assets/bg-stores-schedule.png')"
+    :img-src="require('../../assets/landing/bg-stores-schedule.png')"
     img-alt="bg-stores-schedule"
     class="rounded"
   >

@@ -21,7 +21,7 @@
         <b-col cols="12" md="5" class="order-md-2 order-1">
           <div class="us-dropped-container mr-4">
             <b-img
-              :src="require('../assets/about-us-img.jpeg')"
+              :src="require('../assets/landing/about-us-img.jpeg')"
               center
               fluid
               alt="about-us-img"

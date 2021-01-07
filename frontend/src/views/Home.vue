@@ -92,7 +92,7 @@
             class="d-flex align-items-center justify-content-center"
           >
             <b-img
-              src="../assets/about-us-img.jpeg"
+              :src="require('@/assets/landing/about-us-img.jpeg')"
               center
               fluid
               rounded="circle"
@@ -100,6 +100,24 @@
             ></b-img>
           </b-col>
         </b-row>
+      </b-container>
+    </section>
+    <section class="about-us2">
+      <b-container
+        class="d-flex flex-wrap justify-content-around lead font-weight-bold py-5"
+      >
+        <span class="d-flex my-3 my-sm-0 align-items-center">
+          <b-icon icon="bookmark-star-fill" />
+          Calidad
+        </span>
+        <span class="d-flex my-3 my-sm-0 align-items-center">
+          <b-icon icon="truck" />
+          Entrega a tu puerta
+        </span>
+        <span class="d-flex my-3 my-sm-0 align-items-center">
+          <b-icon icon="shield-lock-fill" />
+          Seguridad
+        </span>
       </b-container>
     </section>
     <!--OUR BRANDS-->
@@ -145,7 +163,7 @@
           <b-col cols="12" md="4">
             <div class="ad-img-cont shadow rounded">
               <b-img
-                :src="require('../assets/delivery-banner2.png')"
+                :src="require('@/assets/landing/delivery-banner2.png')"
                 center
                 fluid
                 @click="goToShop()"
@@ -156,7 +174,7 @@
           <b-col cols="6" md="4">
             <div class="ad-img-cont shadow rounded">
               <b-img
-                :src="require('../assets/delivery-banner3.png')"
+                :src="require('@/assets/landing/delivery-banner3.png')"
                 center
                 fluid
                 @click="goToShop()"
@@ -167,7 +185,7 @@
           <b-col cols="6" md="4">
             <div class="ad-img-cont shadow rounded">
               <b-img
-                :src="require('../assets/delivery-banner1.png')"
+                :src="require('@/assets/landing/delivery-banner1.png')"
                 center
                 fluid
                 @click="goToShop()"
@@ -258,7 +276,7 @@ export default {
 <style lang="scss" scoped>
 .jumbotron {
   color: white;
-  background-image: url("../assets/landing-hero-bg.png");
+  background-image: url("../assets/landing/landing-hero-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -300,6 +318,15 @@ section:not(:first-child) {
 section.about-us {
   background: $secondary-section-bg;
   padding: 100px 0;
+}
+section.about-us2 {
+  margin-top: 0;
+  background-color: lighten($secondary-section-bg, 4);
+  svg {
+    color: $secondary;
+    margin-right: 8px;
+    font-size: 3rem;
+  }
 }
 
 section.delivery-banner {

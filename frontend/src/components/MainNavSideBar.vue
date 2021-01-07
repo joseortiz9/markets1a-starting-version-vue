@@ -5,7 +5,6 @@
     no-header
     backdrop-variant="dark"
     backdrop
-    z-index="1031"
   >
     <header
       class="d-flex justify-content-between align-items-baseline px-4 py-3"
@@ -21,7 +20,7 @@
         disabled
       >
         Productos
-        <b-icon icon="arrow-bar-right"></b-icon>
+        <b-icon icon="arrow-bar-right" />
       </b-list-group-item>
       <b-list-group-item
         class="d-flex justify-content-between align-items-baseline"
@@ -30,9 +29,19 @@
         Categorías
         <b-icon icon="arrow-bar-right"></b-icon>
       </b-list-group-item>
+      <b-list-group-item
+        class="d-flex align-items-baseline"
+        to="/discounts"
+        disabled
+      >
+        <span class="text-uppercase font-weight-bold">
+          Descuentos
+          <b-icon class="ml-1" icon="tags-fill" />
+        </span>
+      </b-list-group-item>
       <b-list-group-item to="/">Inicio</b-list-group-item>
       <b-list-group-item to="/shop">Tienda</b-list-group-item>
-      <b-list-group-item to="/#map-contact">Contáctenos</b-list-group-item>
+      <b-list-group-item to="/contact-us">Contáctenos</b-list-group-item>
       <b-list-group-item disabled>Cerrar Sesión</b-list-group-item>
     </b-list-group>
     <template #footer="{ hide }">
@@ -51,7 +60,7 @@ export default {
   components: { DefaultButton },
   methods: {
     goToLogin() {
-      this.$router.push({ name: "Login" });
+      this.$router.push({ name: "Auth" });
     }
   }
 };

@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <section>
     <b-container class="text-center justify-content-center">
       <h1 class="display-2">404</h1>
       <h1 class="display-4">Página no encontrada</h1>
     </b-container>
-  </div>
+  </section>
 </template>
 <script></script>
 <style lang="scss" scoped>

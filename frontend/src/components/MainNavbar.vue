@@ -1,5 +1,6 @@
 <template>
   <div>
+    <MainNavSideBar />
     <b-navbar
       fixed="top"
       class="global-navbar m-md-0 p-1"
@@ -12,11 +13,10 @@
             <b-icon icon="list"></b-icon>
           </b-nav-item>
         </b-navbar-nav>
-        <MainNavSideBar />
 
         <b-navbar-brand to="/">
           <b-img
-            src="../assets/logo-nav.png"
+            :src="require('@/assets/landing/logo-nav.png')"
             class="rounded"
             alt="navbar-logo"
             height="32"
@@ -28,7 +28,7 @@
         </b-navbar-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav>
-          <b-nav-item to="/login">
+          <b-nav-item to="/auth">
             <b-icon icon="person-circle"></b-icon>
           </b-nav-item>
           <div class="d-none d-md-flex">
@@ -66,7 +66,7 @@
           <b-nav-item to="/">Inicio</b-nav-item>
           <b-nav-item to="/contact-us">Contáctenos</b-nav-item>
           <b-nav-item to="/shop">Tienda</b-nav-item>
-          <b-nav-item to="/login">Ingresar</b-nav-item>
+          <b-nav-item to="/auth">Ingresar</b-nav-item>
           <!--<b-nav-item to="/categories">Productos</b-nav-item>-->
         </b-navbar-nav>
       </b-container>
