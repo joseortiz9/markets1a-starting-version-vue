@@ -6,7 +6,11 @@
     </b-container>
   </section>
 </template>
-<script></script>
+<script>
+export default {
+  name: "404"
+};
+</script>
 <style lang="scss" scoped>
 .container {
   margin-top: 50px;

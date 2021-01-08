@@ -1,12 +1,21 @@
 {
-    "name": "laravel/laravel",
+    "name": "joseortiz9/supermarkets1a",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "api y dashboard para el supermercado",
     "keywords": [
-        "framework",
-        "laravel"
+        "tienda online",
+        "domicilios gratis",
+        "tienda calidad seguridad"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Jose Ortiz",
+            "email": "joseortiz122799@gmail.com",
+            "homepage": "https://github.com/joseortiz9",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^7.3|^8.0",
         "fideloper/proxy": "^4.4",

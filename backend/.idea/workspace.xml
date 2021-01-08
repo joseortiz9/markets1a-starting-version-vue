@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="09ebcdb2-ffe8-4f60-b73b-da51eaee1501" name="Default Changelist" comment="" />
+    <list default="true" id="09ebcdb2-ffe8-4f60-b73b-da51eaee1501" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/NewsLetterSub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_07_030313_create_newsletter_subs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/forms/auth/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/forms/auth/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/errors/NotFound.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/errors/404.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +43,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -128,14 +164,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kWqMS4OCf43OXCpp2aKGn3XqH3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../supermarkets1a-v7-laravue" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -164,30 +202,52 @@
       <workItem from="1606252983634" duration="2454000" />
       <workItem from="1606887102891" duration="17573000" />
       <workItem from="1608150412603" duration="19000" />
+      <workItem from="1609983923340" duration="9932000" />
+      <workItem from="1610029413537" duration="2312000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2235" y="187" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609988489903">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2235" y="187" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.177.1680.1050@1680.0.1920.1080" timestamp="1609988489903" />
     <state x="2373" y="283" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606929306065">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="2373" y="283" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1680.0.1920.1080/0.177.1680.1050@1680.0.1920.1080" timestamp="1606929306065" />
-    <state x="2289" y="293" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606931478017">
+    <state x="2373" y="440" width="523" height="178" key="ComposerInitDialogKey" timestamp="1609990245384">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="2289" y="293" width="424" height="491" key="FileChooserDialogImpl/1680.0.1920.1080/0.177.1680.1050@1680.0.1920.1080" timestamp="1606931478017" />
+    <state x="2373" y="440" width="523" height="178" key="ComposerInitDialogKey/1680.0.1920.1080/0.177.1680.1050@1680.0.1920.1080" timestamp="1609990245384" />
+    <state x="2289" y="293" width="424" height="491" key="FileChooserDialogImpl" timestamp="1609984030520">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2289" y="293" width="424" height="491" key="FileChooserDialogImpl/1680.0.1920.1080/0.177.1680.1050@1680.0.1920.1080" timestamp="1609984030520" />
     <state x="623" y="460" width="424" height="491" key="FileChooserDialogImpl/1680.0.1920.1080/0.27.1680.997@0.27.1680.997" timestamp="1605826959700" />
     <state x="2392" y="469" key="FileChooserDialogImpl/1680.0.1920.1080/0.27.1680.997@1680.0.1920.1080" timestamp="1605833177671" />
-    <state x="2129" y="160" width="1022" height="737" key="SettingsEditor" timestamp="1606939538733">
+    <state x="2129" y="160" width="1022" height="737" key="SettingsEditor" timestamp="1609990310811">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="2129" y="160" width="1022" height="737" key="SettingsEditor/1680.0.1920.1080/0.177.1680.1050@1680.0.1920.1080" timestamp="1606939538733" />
-    <state x="2303" y="245" width="672" height="678" key="search.everywhere.popup" timestamp="1606939518625">
+    <state x="2129" y="160" width="1022" height="737" key="SettingsEditor/1680.0.1920.1080/0.177.1680.1050@1680.0.1920.1080" timestamp="1609990310811" />
+    <state x="2303" y="245" width="672" height="678" key="search.everywhere.popup" timestamp="1609995811490">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="2303" y="245" width="672" height="678" key="search.everywhere.popup/1680.0.1920.1080/0.177.1680.1050@1680.0.1920.1080" timestamp="1606939518625" />
+    <state x="2303" y="245" width="672" height="678" key="search.everywhere.popup/1680.0.1920.1080/0.177.1680.1050@1680.0.1920.1080" timestamp="1609995811490" />
   </component>
 </project>

@@ -3,7 +3,7 @@
     <h2 class="text-primary font-weight-bold mb-3 mb-5">
       Iniciar Sesión
     </h2>
-    <b-form @submit="onSubmit">
+    <b-form @submit.prevent="onSubmit">
       <b-form-group
         id="email-input"
         label="Correo electrónico:"
@@ -63,8 +63,7 @@ export default {
     };
   },
   methods: {
-    onSubmit(event) {
-      event.preventDefault();
+    onSubmit() {
       alert(JSON.stringify(this.form));
     }
   }

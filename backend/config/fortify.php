@@ -61,7 +61,7 @@ return [
     |
     */
 
-    'home' => RouteServiceProvider::HOME,
+    'home' => env('SPA_URL') . '/admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -74,7 +74,7 @@ return [
     |
     */
 
-    'prefix' => '',
+    'prefix' => 'api',
 
     'domain' => null,
 
@@ -117,7 +117,7 @@ return [
     |
     */
 
-    'views' => true,
+    'views' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -136,9 +136,9 @@ return [
         // Features::emailVerification(),
         Features::updateProfileInformation(),
         Features::updatePasswords(),
-        Features::twoFactorAuthentication([
+        /*Features::twoFactorAuthentication([
             'confirmPassword' => true,
-        ]),
+        ]),*/
     ],
 
 ];
